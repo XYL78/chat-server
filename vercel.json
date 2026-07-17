@@ -1,5 +1,5 @@
 {
-  "路由": [
-    { "src": "/ws", "目的地": "/api/ws" }
+  "rewrites": [
+    { "source": "/ws", "destination": "/api/ws" }
   ]
 }
