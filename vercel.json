@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/ws.js": { "runtime": "edge" }
+  },
+  "routes": [
+    { "src": "/ws", "dest": "/api/ws" }
+  ]
+}
