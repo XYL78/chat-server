@@ -1,0 +1,36 @@
+#此工作流将使用节点运行测试，然后在创建发布时将包发布到GitHub包
+名称：Node.js包
+
+#有关详细信息，请参阅：https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages: Node.js包
+
+在…… 之上：在…… 之上：
+释放：释放：
+类型：[已创建]类型：[已创建] [创造]
+
+作业：作业：
+建立：建立：
+run-on:ubuntu-lastestrun-on:ubuntu-lAST ubuntuu-最新
+步骤：步骤：
+-使用：操作/结帐@v4uses- 使用：操作/结帐@v4uses 操作/结帐@v4结帐@v4uses 操作/结帐@v4
+-使用：操作/setup-node@v4uses/setup-node@v4uses: 操作/设置-节点@v4
+和……一起：:
+节点版本：20节点版本：20 20
+npm ci: npm ci
+-运行：npm测试运行：npm测试
+
+publish-gpr：:
+需求：构建需求：构建 建立
+run-on:ubuntu-latest:ubuntu-最新
+权限：:
+内容：已读内容：已读 读
+包：写入: 写
+步骤：:
+-使用：操作/结帐@v4uses: 操作/结帐@v4
+-使用：操作/setup-node@v4uses: 操作/设置-节点@v4
+和……一起：:
+节点版本：20节点版本：20 20
+registry-url:https://npm.pkg.github.com/: //npm.pkg.github.com/://npm.pkg.github.com/
+-运行：npm cirun:npm ci
+-运行：npm发布：npm发布
+env：:
+NODE_AUTH_TOKEN：${{secrets.GITHUB_TOKEN}}：${{secrets.GITHUB_TOKEN}}
