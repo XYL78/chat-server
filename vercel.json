@@ -1,5 +1,13 @@
 {
-  "rewrites": [
-    { "source": "/ws", "destination": "/api/ws" }
+  "functions": {
+    "api/ws.js": {
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/ws",
+      "dest": "/api/ws.js"
+    }
   ]
 }
